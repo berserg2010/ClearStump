@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'stump',
     'rest_framework',
-    'djoser',
     'corsheaders',
 ]
 
@@ -88,17 +87,12 @@ DATABASES = {
 
 
 CORS_ALLOWED_ORIGINS  =  [
-    "http: // localhost: 8080" ,
+    "http://localhost:8080" ,
 ]
 
 
 CORS_ALLOW_METHODS = [
-    'DELETE',
     'GET',
-    'OPTIONS',
-    'PATCH',
-    'POST',
-    'PUT',
 ]
 
 

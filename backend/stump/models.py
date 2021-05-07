@@ -36,7 +36,7 @@ class ServiceCategory(BaseModel):
     pass
 
 
-class ServiceCard(models.Model):
+class ServiceCard(BaseModel):
     category = models.ForeignKey(
         ServiceCategory,
         verbose_name='категория услуги',

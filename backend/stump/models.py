@@ -52,3 +52,11 @@ class ServiceCard(BaseModel):
         default=True,
         verbose_name='активная',
     )
+
+    class Meta:
+        verbose_name = 'услуга'
+        verbose_name_plural = 'услуги'
+
+    def __str__(self):
+        return f'{self.title}'
+

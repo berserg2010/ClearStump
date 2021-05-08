@@ -33,14 +33,22 @@ class BaseModel(models.Model):
 
 
 class ServiceCategory(BaseModel):
-    pass
+    class Meta:
+        verbose_name = 'услуга'
+        verbose_name_plural = 'услуги'
+
+    def __str__(self):
+        return f'{self.title}'
 
 
 class ServiceCard(BaseModel):
     category = models.ForeignKey(
         ServiceCategory,
-        verbose_name='категория услуги',
+        verbose_name='категория',
         on_delete=models.CASCADE,
     )
 
-    is_active = models.BooleanField()
+    is_active = models.BooleanField(
+        default=True,
+        verbose_name='активная',
+    )

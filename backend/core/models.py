@@ -19,7 +19,13 @@ class SettingsSite(models.Model):
         verbose_name='номер телефона',
     )
 
-    email = models.EmailField()
+    email = models.EmailField(
+        blank=True,
+        verbose_name='эл. почта',
+    )
 
-    is_active = models.BooleanField()
+    is_active = models.BooleanField(
+        default=True,
+        verbose_name='активные',
+    )
 

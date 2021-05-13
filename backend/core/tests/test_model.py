@@ -8,8 +8,8 @@ pytestmark = pytest.mark.django_db
 
 
 def test_model():
-        instance = mixer.blend(SettingsSite)
+    instance = mixer.blend(SettingsSite)
 
-        assert instance
-        assert SettingsSite.objects.get(pk=instance.pk)
+    assert instance
+    assert SettingsSite.objects.get(pk=instance.pk)
 

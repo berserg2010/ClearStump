@@ -20,7 +20,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
 
-    'stump',
+    'stump.apps.StumpConfig',
+    'core.apps.CoreConfig',
 ]
 
 MIDDLEWARE = [

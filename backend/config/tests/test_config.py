@@ -12,3 +12,4 @@ def test_get_index():
     response = client.get('/admin/')
 
     assert response.status_code == HTTP_302_FOUND
+

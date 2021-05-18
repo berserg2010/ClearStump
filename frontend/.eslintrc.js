@@ -14,5 +14,18 @@ module.exports = {
   plugins: [
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    'no-console': ['error', { allow: ['warn', 'error', 'info'] }],
+    'space-before-function-paren': ['error', 'never'],
+    'comma-dangle': ['error', 'only-multiline'],
+    'vue/html-self-closing': ['error', {
+      'html': {
+        'void': 'always',
+        'normal': 'never',
+        'component': 'always',
+      },
+      'svg': 'always',
+      'math': 'always',
+    }]
+  }
 }

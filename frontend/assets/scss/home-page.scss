@@ -1,5 +1,62 @@
 .swiper-slide {
   height: 100vh;
-  background-color: dimgray;
+  background-color: #fff7ea;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.home {
+}
+
+.home_inner {
+  text-align: left;
+  padding-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.home_inner-content {
+  display: block;
+  padding-top: 100px;
+  margin-left: 23px;
+  max-width: 500px;
+}
+
+.home_title h1 {
+  font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.home_text h2 {
+  font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.home_img {
+  padding: 80px 50px 100px 0px;
+}
+
+.home_btn {
+  width: 150px;
+  font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+  font-weight: normal;
+  color: #ffffff;
+  background-color: #0091ff;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.home_btn:hover {
+  color: #2e3192;
+  transition: all .5s;
+}

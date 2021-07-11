@@ -1,15 +1,17 @@
 <template>
-  <main>
-    <Navbar />
+  <div>
+    <Header />
     <Nuxt />
-  </main>
+  </div>
+
 </template>
 
 <script>
-import Navbar from '../components/Navbar'
+import Header from '../components/Header'
+
 export default {
-  comments: {
-    Navbar
+  components: {
+    Header,
   }
 }
 </script>

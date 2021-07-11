@@ -1,0 +1,21 @@
+.content {
+  height: 100vh;
+
+  .content_item {
+    padding-left: 32px;
+    padding-right: 32px;
+
+    font-family: Roboto, sans-serif;
+  }
+
+  h2 {
+    margin: 0;
+    padding: 0;
+    padding-top: 96px;
+
+    font-weight: bold;
+    font-size: 24px;
+
+    text-transform: uppercase;
+  }
+}

@@ -1,23 +1,23 @@
 <template>
-  <div>
+  <main class="main">
     <h1 class="visually-hidden">
       {{ title }}
     </h1>
-    <Swipe />
-  </div>
+    <Content />
+  </main>
 </template>
 
 <script>
-import Swipe from './Swipe.vue'
+import Content from '../components/Content'
 
 export default {
   name: 'Home',
   components: {
-    Swipe,
+    Content,
   },
   data() {
     return {
-      title: 'Главная страница'
+      title: 'Главная страница',
     }
   },
   head() {

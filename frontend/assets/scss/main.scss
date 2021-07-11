@@ -1,8 +1,19 @@
 @import 'normalize';
 @import 'variables';
-@import 'home-page';
 @import 'transition';
-@import 'navbar';
+
+@import 'home_page';
+@import 'header';
+
+
+@font-face {
+  font-family: 'Days One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('~assets/fonts/Days_One/DaysOne-Regular.ttf') format('truetype');
+}
+
 
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;

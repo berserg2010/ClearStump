@@ -17,11 +17,10 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+    padding: 0 22px;
 
+    max-width: 1240px;
     height: 100%;
-  }
-  .header__wrapper {
-    margin: 0 22px;
   }
   .logo a {
     white-space: nowrap;
@@ -33,5 +32,13 @@
     font-family: 'Days One', sans-serif;
   }
   .menu {
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .header {
+    .header__wrapper {
+      margin: 0 auto;
+    }
   }
 }

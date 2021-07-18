@@ -2,12 +2,19 @@
   height: 100vh;
 
   .content_item {
+    position: relative;
+
     padding-left: 32px;
     padding-right: 32px;
 
+    background-color: $second-color;
+
+    color: $primary-color;
     font-family: Roboto, sans-serif;
   }
-
+  .wrapper {
+    max-width: 1240px;
+  }
   h2 {
     margin: 0;
     padding: 0;
@@ -17,5 +24,22 @@
     font-size: 24px;
 
     text-transform: uppercase;
+  }
+  img {
+    position: absolute;
+    top: calc(10% + 200px);
+    left: calc(10% - 300px);
+  }
+  p {
+    position: relative;
+
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .content {
+    .content__wrapper {
+      margin: 0 auto;
+    }
   }
 }

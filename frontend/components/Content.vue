@@ -1,9 +1,6 @@
 <template>
-  <swiper
-    class="content"
-    :options="swiperOption"
-  >
-    <swiper-slide
+  <div class="content">
+    <div
       v-for="(n, i) in ['#dbd3d8', '#d8b4a0', '#d77a61']"
       :key="i"
       class="content_item"
@@ -15,39 +12,13 @@
           И сказал Бог: да будут светила на тверди небесной для отделения дня от ночи, и для знамений, и времен, и дней, и годов; и да будут они светильниками на тверди небесной, чтобы светить на землю. И стало так.
         </p>
       </div>
-    </swiper-slide>
-    <div slot="scrollbar" class="swiper-scrollbar"></div>
-  </swiper>
+    </div>
+    <div class="swiper-scrollbar" slot="scrollbar"></div>
+  </div>
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
-
 export default {
   name: 'Content',
-  title: 'Vertical slider',
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
-  data() {
-    return {
-      swiperOption: {
-        direction: 'vertical',
-        slidesPerView: 1,
-        spaceBetween: 0,
-        effect: 'fade',
-        mousewheel: true,
-        scrollbar: {
-          el: '.swiper-scrollbar',
-        },
-      }
-    }
-  },
-  methods: {
-    getColor(n) {
-      return `background-color: ${n}`
-    }
-  }
 }
 </script>

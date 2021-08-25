@@ -15,7 +15,7 @@ export default {
     ]
   },
 
-  // // gh-pages
+  // gh-pages
   // target: 'static',
   // router: {
   //   base: '/ClearStump/'

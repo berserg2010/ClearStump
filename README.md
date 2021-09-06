@@ -16,6 +16,8 @@ $ python3 manage.py runserver 0.0.0.0:8000
 
 ## Frontend
 
+[Demo](https://berserg2010.github.io/ClearStump/)
+
 ```bash
 # install dependencies
 $ npm install
@@ -30,5 +32,3 @@ $ npm run start
 # generate static project
 $ npm run generate
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

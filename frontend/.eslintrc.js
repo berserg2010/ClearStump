@@ -26,6 +26,8 @@ module.exports = {
       },
       'svg': 'always',
       'math': 'always',
-    }]
-  }
+    }],
+    'semi': [2, 'always'],
+    'no-multiple-empty-lines': ['error', { 'max': 2, 'maxEOF': 1, 'maxBOF': 2 }],
+  },
 }

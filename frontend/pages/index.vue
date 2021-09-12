@@ -8,7 +8,8 @@
 </template>
 
 <script>
-import Content from '../components/Content'
+import Content from '../components/Content';
+
 
 export default {
   name: 'Home',
@@ -18,12 +19,12 @@ export default {
   data() {
     return {
       title: 'Главная страница',
-    }
+    };
   },
   head() {
     return {
-      title: this.title,
-    }
+      title: `${this.title} - Ясен Пень`,
+    };
   },
-}
+};
 </script>

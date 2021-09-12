@@ -15,12 +15,15 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
-    padding: 0 22px;
-
+    gap: 16px;
     max-width: 1240px;
     height: 100%;
+    padding: 0 22px;
+  }
+  .header__wrapper {
+    justify-content: space-between;
   }
   .logo a {
     white-space: nowrap;
@@ -31,7 +34,25 @@
     text-decoration: none;
     font-family: 'Days One', sans-serif;
   }
+
   .menu {
+    display: none;
+    flex-grow: 2;
+    margin-right: 64px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .header {
+    .header__wrapper {
+      justify-content: start;
+    }
+    .menu {
+      display: flex;
+    }
+    .menu_button {
+      display: none;
+    }
   }
 }
 

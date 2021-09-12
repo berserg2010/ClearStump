@@ -4,14 +4,29 @@
 
 @import 'home_page';
 @import 'header';
+@import 'menu';
 
 
 @font-face {
   font-family: 'Days One';
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   font-display: swap;
   src: url('~assets/fonts/Days_One/DaysOne-Regular.ttf') format('truetype');
+}
+
+body {
+  min-width: 360px;
+
+  background-color: $second-color;
+
+  font-family: 'Days One', serif;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.main {
+  //margin-top: 64px;
 }
 
 .visually-hidden:not(:focus):not(:active) {

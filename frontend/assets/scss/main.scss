@@ -2,9 +2,10 @@
 @import 'variables';
 @import 'transition';
 
-@import 'home_page';
 @import 'header';
 @import 'menu';
+@import 'home_page';
+@import 'contacts';
 
 
 @font-face {
@@ -25,8 +26,13 @@ body {
   font-size: 16px;
 }
 
-.main {
-  //margin-top: 64px;
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeout {
+  from { visibility: visible; opacity: 1; }
+  to { visibility: hidden; opacity: 0; }
 }
 
 .visually-hidden:not(:focus):not(:active) {

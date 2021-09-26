@@ -34,24 +34,12 @@
     text-decoration: none;
     font-family: 'Days One', sans-serif;
   }
-
-  .menu {
-    display: none;
-    flex-grow: 2;
-    margin-right: 64px;
-  }
 }
 
 @media screen and (min-width: 600px) {
   .header {
     .header__wrapper {
       justify-content: start;
-    }
-    .menu {
-      display: flex;
-    }
-    .menu_button {
-      display: none;
     }
   }
 }

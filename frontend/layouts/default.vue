@@ -1,17 +1,21 @@
 <template>
   <div>
     <Header />
-    <Nuxt />
+    <transition name="fade">
+      <Nuxt />
+    </transition>
   </div>
-
 </template>
 
-<script>
-import Header from '../components/Header'
+<script lang="ts">
+import { defineComponent } from '@vue/composition-api';
 
-export default {
+import Header from '@/components/Header.vue';
+
+
+export default defineComponent({
   components: {
     Header,
-  }
-}
+  },
+});
 </script>

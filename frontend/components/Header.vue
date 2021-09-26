@@ -2,18 +2,19 @@
   <header class="header">
     <div class="wrapper header__wrapper">
       <div class="logo">
-        <NuxtLink to="/">
+        <NuxtLink
+          to="/"
+          @click.native="menuButtonHandler(false)"
+        >
           Ясен Пень
         </NuxtLink>
       </div>
-      <nav class="menu">
-        <NuxtLink to="about">
-          О нас
-        </NuxtLink>
-        <NuxtLink to="contacts">
-          Контакты
-        </NuxtLink>
-      </nav>
+
+      <Menu
+        :menu-is-open="menuIsOpen"
+        :menu-button-handler="menuButtonHandler"
+      />
+
       <button
         class="menu_button "
         :class="{
@@ -27,17 +28,22 @@
   </header>
 </template>
 
-<script>
-import { ref } from '@nuxtjs/composition-api';
+<script lang="ts">
+import { defineComponent, ref } from '@nuxtjs/composition-api';
+
+import Menu from '@/components/Menu.vue';
 
 
-export default {
+export default defineComponent({
   name: 'Header',
+  components: {
+    Menu,
+  },
   setup() {
     const menuIsOpen = ref(false);
 
-    const menuButtonHandler = () => {
-      menuIsOpen.value = !menuIsOpen.value;
+    const menuButtonHandler = (flag = true): void => {
+      menuIsOpen.value = flag && !menuIsOpen.value;
     };
 
     return {
@@ -45,5 +51,5 @@ export default {
       menuButtonHandler,
     };
   },
-};
+});
 </script>

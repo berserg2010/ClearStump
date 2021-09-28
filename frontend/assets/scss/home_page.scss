@@ -40,7 +40,7 @@
 
 .home {
   overflow-x: scroll;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: y mandatory;
 
   .content {
     scroll-snap-align: start;

@@ -4,20 +4,22 @@
       {{ title }}
     </h1>
     <section class="content">
-      <img src="@/assets/img/studio_session_022.jpg" width="600" height="400" alt="" />
+      <img src="@/assets/img/studio_session_022.jpg" width="600" height="400" alt="Изделие из дерева в Ясень Пень" />
       <div class="wrapper content__wrapper">
         <h2>Главная</h2>
         <p>Услуги по воплощению ваших идей и коворкинг.</p>
       </div>
     </section>
 
-    <section class="content">
+    <section class="content services">
       <div class="wrapper content__wrapper">
         <h2>Услуги</h2>
-        <p>Производство ‒ 3D и CNC.</p>
-        <p>Мастер-классы и обучение.</p>
-        <p>Коворкинг.</p>
-        <p>Предоставляем юридический адрес и доступ в интернет.</p>
+        <ul class="services__list">
+          <li><a class="services__list-item" href="#">Производство ‒ 3D и CNC.</a></li>
+          <li><a class="services__list-item" href="#">Мастер-классы и обучение.</a></li>
+          <li><a class="services__list-item" href="#">Коворкинг.</a></li>
+          <li><a class="services__list-item" href="#">Предоставляем юридический адрес и доступ в интернет.</a></li>
+        </ul>
       </div>
     </section>
 

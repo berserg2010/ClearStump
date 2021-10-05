@@ -15,10 +15,18 @@
       <div class="wrapper content__wrapper">
         <h2>Услуги</h2>
         <ul class="services__list">
-          <li><a class="services__list-item" href="#">Производство ‒ 3D и CNC.</a></li>
-          <li><a class="services__list-item" href="#">Мастер-классы и обучение.</a></li>
-          <li><a class="services__list-item" href="#">Коворкинг.</a></li>
-          <li><a class="services__list-item" href="#">Предоставляем юридический адрес и доступ в интернет.</a></li>
+          <li class="services__list-item">
+            <a class="services__list-item-link" href="#">Производство ‒ 3D и CNC</a>
+          </li>
+          <li class="services__list-item">
+            <a class="services__list-item-link" href="#">Мастер-классы и обучение</a>
+          </li>
+          <li class="services__list-item">
+            <a class="services__list-item-link" href="#">Коворкинг</a>
+          </li>
+          <li class="services__list-item">
+            <a class="services__list-item-link" href="#">Юридический адрес и доступ в интернет</a>
+          </li>
         </ul>
       </div>
     </section>

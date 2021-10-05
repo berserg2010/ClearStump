@@ -14,20 +14,7 @@
     <section class="content services">
       <div class="wrapper content__wrapper">
         <h2>Услуги</h2>
-        <ul class="services__list">
-          <li class="services__list-item">
-            <a class="services__list-item-link" href="#">Производство ‒ 3D и CNC</a>
-          </li>
-          <li class="services__list-item">
-            <a class="services__list-item-link" href="#">Мастер-классы и обучение</a>
-          </li>
-          <li class="services__list-item">
-            <a class="services__list-item-link" href="#">Коворкинг</a>
-          </li>
-          <li class="services__list-item">
-            <a class="services__list-item-link" href="#">Юридический адрес и доступ в интернет</a>
-          </li>
-        </ul>
+        <div>{{ Flick }}</div>
       </div>
     </section>
 
@@ -46,13 +33,16 @@
 </template>
 
 <script lang="ts">
+
 import { defineComponent, ref } from '@vue/composition-api';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import Flick from '@/components/Slider-services.vue';
 
 export default defineComponent({
   name: 'Home',
   setup() {
-    const title = ref('Главная страниц');
+    const title = ref('Главная страница');
 
     return {
       title,

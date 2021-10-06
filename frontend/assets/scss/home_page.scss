@@ -41,53 +41,6 @@
 
     font-size: 18px;
   }
-
-  ul, li {
-    list-style: none;
-    padding: 0;
-  }
-
-  a {
-    font: inherit;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .services__list {
-    display: flex;
-    justify-content: space-between;
-    /*flex-wrap: wrap;*/
-
-  }
-
-  .services__list-item {
-    display: block;
-    margin: 20px 5px;
-  }
-
-  .services__list-item-link {
-    display: block;
-    box-sizing: border-box;
-
-    width: 10.42em;
-    height: 14.58em;
-
-    padding: 40% 20px 20px;
-
-    font-family: 'Days One', sans-serif;
-    font-weight: normal;
-    font-size: 22px;
-    text-align: center;
-    vertical-align: middle;
-
-    background-image: url("assets/img/studio_session_022.jpg");
-    background-position: right bottom;
-
-
-    border: 0 solid black;
-    box-shadow: 0 10px 10px 0 rgba($primary-color, 0.3);
-    border-radius: 40px;
-  }
 }
 
 .home {

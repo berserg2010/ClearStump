@@ -14,7 +14,7 @@
     <section class="content services">
       <div class="wrapper content__wrapper">
         <h2>Услуги</h2>
-        <div>{{ Flick }}</div>
+        <SliderServices />
       </div>
     </section>
 
@@ -36,8 +36,8 @@
 
 import { defineComponent, ref } from '@vue/composition-api';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import Flick from '@/components/Slider-services.vue';
+import SliderServices from '~/components/SliderServices.vue';
+
 
 export default defineComponent({
   name: 'Home',

@@ -15,12 +15,15 @@
   </Flicking>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from '@vue/composition-api';
+
 import { Flicking } from '@egjs/vue-flicking';
+
 
 export default {
   components: {
-    Flick: Flicking
-  }
-};
+    Flicking,
+  },
+});
 </script>

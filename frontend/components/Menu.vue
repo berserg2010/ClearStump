@@ -17,6 +17,14 @@
       </li>
       <li class="menu_item">
         <NuxtLink
+          to="gallery"
+          @click.native="menuButtonHandler(false)"
+        >
+          Галерея
+        </NuxtLink>
+      </li>
+      <li class="menu_item">
+        <NuxtLink
           to="contacts"
           @click.native="menuButtonHandler(false)"
         >

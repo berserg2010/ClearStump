@@ -4,7 +4,7 @@
       {{ title }}
     </h1>
     <section class="content">
-      <img src="@/assets/img/studio_session_022.jpg" width="600" height="400" alt="Изделие из дерева в Ясень Пень" />
+      <img class="main-img" src="@/assets/img/studio_session_022.jpg" width="600" height="400" alt="Изделие из дерева в Ясень Пень" />
       <div class="wrapper content__wrapper">
         <h2>Главная</h2>
         <p>Услуги по воплощению ваших идей и коворкинг.</p>

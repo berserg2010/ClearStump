@@ -35,7 +35,6 @@
 </template>
 
 <script lang="ts">
-
 import { defineComponent, ref } from '@vue/composition-api';
 
 import SliderServices from '~/components/SliderServices.vue';
@@ -43,6 +42,9 @@ import SliderServices from '~/components/SliderServices.vue';
 
 export default defineComponent({
   name: 'Home',
+  components: {
+    SliderServices,
+  },
   setup() {
     const title = ref('Главная страница');
 

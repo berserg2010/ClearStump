@@ -1,7 +1,7 @@
 <template>
   <Flicking
-    ref="flicking"
-    :options="{ circular: true, align: 'center', inputType: ['touch', 'mouse'] }"
+    ref="flickingEl"
+    :options="options"
   >
     <div class="services__list-item">
       <a class="services__list-item-link" href="">Производство ‒ 3D и CNC</a>
@@ -19,30 +19,45 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from '@vue/composition-api';
+import { defineComponent, ref, reactive, onMounted, onBeforeUnmount } from '@vue/composition-api';
 
 import { Flicking } from '@egjs/vue-flicking';
 
 
-export default {
+export default defineComponent({
+  name: 'SliderService',
   components: {
     Flicking,
   },
   setup() {
-    const flicking = ref<HTMLElement | undefined>();
+    const flickingEl = ref<Flicking | undefined>();
 
-    onMounted(() => {
-      // @ts-ignore
-      if (typeof flicking.value !== 'undefined' && flicking.value.lenght > 0) {
-        setInterval(() => {
-          // @ts-ignore
-          flicking.value.next();
+    const options = reactive({
+      circular: true,
+      align: 'center',
+      inputType: ['touch', 'mouse'],
+    });
+
+    const interval = ref<number | null>(null);
+
+    const autoScrollCarousel = () => {
+      if (typeof flickingEl.value !== 'undefined' && flickingEl.value.panelCount > 0) {
+        interval.value = window.setInterval(() => {
+          flickingEl.value?.next();
         }, 5000);
+      }
+    };
+
+    onMounted(autoScrollCarousel);
+    onBeforeUnmount(() => {
+      if (typeof interval.value === 'number') {
+        clearInterval(interval.value);
       }
     });
 
     return {
-      flicking,
+      flickingEl,
+      options,
     };
   },
 });

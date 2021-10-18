@@ -12,13 +12,15 @@ a {
   text-decoration: none;
   color: inherit;
 }
+.flicking-viewport {
+    width: 60vw;
+  }
 
 .services__list-item {
   display: block;
   margin: 20px 5px;
 
-  width: 50vw;
-
+  width: 55vw;
 }
 
 .services__list-item-link {

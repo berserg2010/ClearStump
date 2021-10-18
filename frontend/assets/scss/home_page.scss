@@ -54,6 +54,11 @@
   }
 
   .content__slider-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 60vh;
     padding: 20px;
   }
 }
@@ -66,3 +71,10 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .main {
+    .main-img {
+    top: calc(40vh);
+    }
+  }
+}

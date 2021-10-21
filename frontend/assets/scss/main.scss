@@ -11,6 +11,7 @@
 
 @import 'slider_services';
 
+
 @font-face {
   font-family: 'Days One';
   font-style: normal;
@@ -28,6 +29,11 @@ body {
   font-weight: normal;
   font-size: 16px;
   line-height: 1.5;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 16px;
 }
 
 @keyframes fadein {

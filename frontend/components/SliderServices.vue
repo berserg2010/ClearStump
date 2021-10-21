@@ -4,16 +4,16 @@
     :options="options"
   >
     <div class="services__list-item">
-      <a class="services__list-item-link" href="">Производство ‒ 3D и CNC</a>
+      <a class="services__list-item-link">Производство ‒ 3D и CNC</a>
     </div>
     <div class="services__list-item">
-      <a class="services__list-item-link" href="">Мастер-классы и обучение</a>
+      <a class="services__list-item-link">Мастер-классы и обучение</a>
     </div>
     <div class="services__list-item">
-      <a class="services__list-item-link" href="">Коворкинг</a>
+      <a class="services__list-item-link">Коворкинг</a>
     </div>
     <div class="services__list-item">
-      <a class="services__list-item-link" href="">Юридический адрес и доступ в интернет</a>
+      <a class="services__list-item-link">Юридический адрес и доступ в интернет</a>
     </div>
   </Flicking>
 </template>

@@ -4,7 +4,7 @@
       <div class="wrapper content__wrapper">
         <h1>{{ title }}</h1>
         <div class="contacts__item">
-          <p>Результаты работы наших умелых рук</p>
+          <p>Результаты работы наших умелых рук.</p>
           <section class="gallery-items">
             <img class="gallery-item vertical-photo" src="@/assets/img/gallery/3 д Печать из полиамида 2.JPG" width="600" alt="фото" />
             <img class="gallery-item vertical-photo" src="@/assets/img/gallery/2020-04-30 19-27-43.JPG" width="600" alt="фото" />

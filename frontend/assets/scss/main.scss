@@ -41,8 +41,14 @@ p {
   to { opacity: 1; }
 }
 @keyframes fadeout {
-  from { visibility: visible; opacity: 1; }
-  to { visibility: hidden; opacity: 0; }
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 
 .visually-hidden:not(:focus):not(:active) {

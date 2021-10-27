@@ -16,7 +16,7 @@ Lint frontend:
   script:
     - npm run lint
   tags:
-    - docker-django
+    - clear_stump
   
 
 
@@ -25,5 +25,5 @@ Test frontend:
   script:
     - npm run test
   tags:
-    - docker-django
+    - clear_stump
 

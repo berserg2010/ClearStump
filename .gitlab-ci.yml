@@ -15,9 +15,15 @@ Lint frontend:
   stage: lint
   script:
     - npm run lint
+  tags:
+    - docker-django
+  
 
 
 Test frontend:
   stage: test
   script:
     - npm run test
+  tags:
+    - docker-django
+

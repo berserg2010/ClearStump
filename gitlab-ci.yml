@@ -1,0 +1,23 @@
+stages:
+  - lint
+  - test
+
+
+image: node:14.17.0-alpine
+
+
+before_script:
+  - cd frontend
+  - npm ci --cache .npm --prefer-offline
+
+
+Lint frontend:
+  stage: lint
+  script:
+    - npm run lint
+
+
+Test frontend:
+  stage: test
+  script:
+    - npm run test

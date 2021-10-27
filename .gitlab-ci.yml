@@ -16,7 +16,7 @@ Lint frontend:
   script:
     - npm run lint
   tags:
-    - clear_stump
+    - clear-stump
   
 
 
@@ -25,5 +25,5 @@ Test frontend:
   script:
     - npm run test
   tags:
-    - clear_stump
+    - clear-stump
 

@@ -1,0 +1,68 @@
+@import 'normalize';
+@import 'variables';
+@import 'transition';
+
+@import 'header';
+@import 'menu';
+
+@import 'home_page';
+@import 'contacts';
+@import 'gallery';
+
+@import 'slider_services';
+
+
+@font-face {
+  font-family: 'Days One';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url('assets/fonts/Days_One/DaysOne-Regular.ttf') format('truetype');
+}
+
+body {
+  min-width: 360px;
+
+  background-color: $second-color;
+
+  font-family: 'Days One', serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeout {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

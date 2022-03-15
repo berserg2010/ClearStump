@@ -1,0 +1,25 @@
+name: frontend:lint_and_test
+
+on: [ push ]
+
+jobs:
+  lint_and_test:
+    name: Lint and test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node_version: [ '14', '16' ]
+    defaults:
+      run:
+        working-directory: ./frontend
+    steps:
+      - uses: actions/checkout@v3.0.0
+      - uses: actions/setup-node@v3.0.0
+        with:
+          node-version: ${{ matrix.node_version }}
+      - name: Install packages
+        run: npm ci
+      - name: Run linter
+        run: npm run lint
+      - name: Run test
+        run: npm run test

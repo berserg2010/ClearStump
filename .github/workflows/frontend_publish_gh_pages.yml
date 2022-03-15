@@ -14,7 +14,7 @@ jobs:
         node_version: [ '14' ]
     defaults:
       run:
-        working-directory: ./frontend
+        working-directory: frontend
     steps:
       - uses: actions/checkout@v3.0.0
       - uses: actions/setup-node@v3.0.0
@@ -23,9 +23,10 @@ jobs:
       - name: Install packages
         run: npm ci
       - name: Run build
-        run: npm run build
+        run: npm run generate
       - name: Publish generated content to gh pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./frontend/dist
+          publish_branch: master:gh-pages

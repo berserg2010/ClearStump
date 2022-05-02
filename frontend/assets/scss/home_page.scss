@@ -24,6 +24,7 @@
     max-width: 1240px;
 
     padding-top: 96px;
+    padding-bottom: 48px;
   }
 
   h1, h2 {
@@ -45,7 +46,7 @@
 }
 
 .home {
-  overflow-x: scroll;
+  overflow-x: hidden;
   scroll-snap-type: y mandatory;
 
   .content {

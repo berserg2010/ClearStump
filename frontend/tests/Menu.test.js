@@ -1,7 +1,6 @@
 import { shallowMount, RouterLinkStub } from '@vue/test-utils';
 import Menu from '@/components/Menu.vue';
 
-
 describe('Header', () => {
   it('is a Header instance', () => {
     const wrapper = shallowMount(Menu, {

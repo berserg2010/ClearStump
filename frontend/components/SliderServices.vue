@@ -1,8 +1,5 @@
 <template>
-  <Flicking
-    ref="flickingEl"
-    :options="options"
-  >
+  <Flicking ref="flickingEl" :options="options">
     <div class="services__list-item">
       <a class="services__list-item-link">Производство ‒ 3D и CNC</a>
     </div>
@@ -22,7 +19,6 @@
 import { defineComponent, ref, reactive, onMounted, onBeforeUnmount } from '@vue/composition-api';
 
 import { Flicking } from '@egjs/vue-flicking';
-
 
 export default defineComponent({
   name: 'SliderService',

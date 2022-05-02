@@ -6,11 +6,10 @@
 @import 'menu';
 
 @import 'home_page';
-@import 'contacts';
-@import 'gallery';
+@import 'contacts_page';
+@import 'gallery_page';
 
 @import 'slider_services';
-
 
 @font-face {
   font-family: 'Days One';
@@ -37,9 +36,14 @@ p {
 }
 
 @keyframes fadein {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
+
 @keyframes fadeout {
   from {
     visibility: visible;

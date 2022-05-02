@@ -1,5 +1,4 @@
-@import url('node_modules/@egjs/vue-flicking/dist/flicking.css');
-
+@import url('~/node_modules/@egjs/vue-flicking/dist/flicking.css');
 
 .flicking-viewport {
   width: 296px;
@@ -13,6 +12,7 @@
   max-height: 360px;
   margin: 0 16px;
 }
+
 .services__list-item-link {
   display: flex;
   flex-wrap: nowrap;

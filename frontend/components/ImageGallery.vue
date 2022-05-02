@@ -79,19 +79,19 @@ export default defineComponent({
     const { gallery } = toRefs(props);
 
     const titleList = new Map<string, string>([
-      [ Gallery.GOODS, 'Наши изделия' ],
-      [ Gallery.COWORKING, 'Коворкинг' ],
-      [ Gallery.MANUFACTURE, 'Производство' ],
-      [ Gallery.TRAINING, 'Мастер классы и обучение' ],
-      [ Gallery.PLACE, 'Место расположения' ],
+      [Gallery.GOODS, 'Наши изделия'],
+      [Gallery.COWORKING, 'Коворкинг'],
+      [Gallery.MANUFACTURE, 'Производство'],
+      [Gallery.TRAINING, 'Мастер классы и обучение'],
+      [Gallery.PLACE, 'Место расположения'],
     ]);
 
     const srcList = new Map<string, string[]>([
-      [ Gallery.GOODS, goodsSrcList ],
-      [ Gallery.COWORKING, coworkingSrcList ],
-      [ Gallery.MANUFACTURE, manufactureSrcList ],
-      [ Gallery.TRAINING, trainingSrcList ],
-      [ Gallery.PLACE, placeSrcList ],
+      [Gallery.GOODS, goodsSrcList],
+      [Gallery.COWORKING, coworkingSrcList],
+      [Gallery.MANUFACTURE, manufactureSrcList],
+      [Gallery.TRAINING, trainingSrcList],
+      [Gallery.PLACE, placeSrcList],
     ]);
 
     const titleGallery = computed(() => gallery?.value && titleList.get(gallery.value));

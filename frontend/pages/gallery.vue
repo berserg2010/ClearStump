@@ -6,21 +6,12 @@
 
         <div class="gallery-items">
           <div class="gallery-col">
-            <ImageGallery
-              v-for="(i, key) in colsGallery(cols, 1)"
-              :key="key"
-              :gallery="i"
-            />
+            <ImageGallery v-for="(i, key) in colsGallery(cols, 1)" :key="key" :gallery="i" />
           </div>
           <div v-if="cols === 2" class="gallery-col">
-            <ImageGallery
-              v-for="(i, key) in colsGallery(2, 2)"
-              :key="key"
-              :gallery="i"
-            />
+            <ImageGallery v-for="(i, key) in colsGallery(2, 2)" :key="key" :gallery="i" />
           </div>
         </div>
-
       </div>
     </section>
   </main>
@@ -52,7 +43,7 @@ export default defineComponent({
       onResize();
       window.addEventListener('resize', onResize);
     });
-    
+
     onUpdated(() => {
       onResize();
       window.addEventListener('resize', onResize);

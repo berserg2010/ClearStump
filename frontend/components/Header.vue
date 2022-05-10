@@ -2,21 +2,13 @@
   <header class="header">
     <div class="wrapper header__wrapper">
       <div class="logo">
-        <NuxtLink
-          to="/"
-          @click.native="menuButtonHandler(false)"
-        >
-          Ясен Пень
-        </NuxtLink>
+        <NuxtLink to="/" @click.native="menuButtonHandler(false)"> Ясен Пень </NuxtLink>
       </div>
 
-      <Menu
-        :menu-is-open="menuIsOpen"
-        :menu-button-handler="menuButtonHandler"
-      />
+      <Menu :menu-is-open="menuIsOpen" :menu-button-handler="menuButtonHandler" />
 
       <button
-        class="menu_button "
+        class="menu_button"
         :class="{
           'menu_button--close': !menuIsOpen,
           'menu_button--open': menuIsOpen,
@@ -33,9 +25,8 @@ import { defineComponent, ref } from '@nuxtjs/composition-api';
 
 import Menu from '@/components/Menu.vue';
 
-
 export default defineComponent({
-  name: 'Header',
+  name: 'HeaderComponent',
   components: {
     Menu,
   },

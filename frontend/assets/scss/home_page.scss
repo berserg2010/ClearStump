@@ -24,9 +24,11 @@
     max-width: 1240px;
 
     padding-top: 96px;
+    padding-bottom: 48px;
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     margin: 0;
     margin-bottom: 32px;
     padding: 0;
@@ -37,7 +39,8 @@
     text-transform: uppercase;
   }
 
-  p, dl {
+  p,
+  dl {
     position: relative;
 
     font-size: 18px;
@@ -45,7 +48,7 @@
 }
 
 .home {
-  overflow-x: scroll;
+  overflow-x: hidden;
   scroll-snap-type: y mandatory;
 
   .content {

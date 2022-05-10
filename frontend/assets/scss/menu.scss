@@ -69,12 +69,12 @@
   &.menu--open {
     visibility: visible;
     opacity: 1;
-    animation: fadein .2s;
+    animation: fadein 0.2s;
   }
   &.menu--close {
     visibility: hidden;
     opacity: 0;
-    animation: fadeout .2s;
+    animation: fadeout 0.2s;
   }
 }
 

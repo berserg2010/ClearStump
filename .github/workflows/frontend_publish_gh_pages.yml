@@ -1,0 +1,32 @@
+name: frontend:publish_gh_pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    name: Publish gh pages
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node_version: [ '16' ]
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v3.0.0
+      - uses: actions/setup-node@v3.0.0
+        with:
+          node-version: ${{ matrix.node_version }}
+      - name: Install packages
+        run: npm ci
+      - name: Run build
+        run: npm run generate
+      - name: Publish generated content to gh pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./frontend/dist
+          publish_branch: gh-pages

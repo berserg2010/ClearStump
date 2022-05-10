@@ -1,73 +1,62 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        frontend
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <main class="main home">
+    <h1 class="visually-hidden">
+      {{ title }}
+    </h1>
+    <section class="content">
+      <img
+        class="main-img"
+        src="@/assets/img/studio_session_022.jpg"
+        width="600"
+        height="400"
+        alt="Изделие из дерева в Ясень Пень"
+      />
+      <div class="wrapper content__wrapper">
+        <h2>Творческая мастерская и коворкинг</h2>
+        <p>Мы поможем Вам воплотить в жизнь самые смелые творческие идеи.</p>
       </div>
-    </div>
-  </div>
+    </section>
+
+    <section class="content services">
+      <div class="wrapper content__wrapper">
+        <h2>Услуги</h2>
+        <div class="content__slider-wrapper">
+          <SliderServices />
+        </div>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="wrapper content__wrapper">
+        <h2>О нас</h2>
+        <p>Нам нравится наша работа и люди, которые к нам приходят;)</p>
+        <p>Получается, мы работаем над своими идеями и помогаем продумать и реализовать ваши!</p>
+      </div>
+    </section>
+  </main>
 </template>
 
-<script>
-export default {}
+<script lang="ts">
+import { defineComponent, ref } from '@vue/composition-api';
+
+import SliderServices from '~/components/SliderServices.vue';
+
+export default defineComponent({
+  name: 'HomePage',
+  components: {
+    SliderServices,
+  },
+  setup() {
+    const title = ref('Главная страница');
+
+    return {
+      title,
+    };
+  },
+  head() {
+    return {
+      title: `${this.title} - Ясен Пень`,
+    };
+  },
+});
 </script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>

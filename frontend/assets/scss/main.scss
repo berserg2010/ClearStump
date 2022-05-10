@@ -35,6 +35,10 @@ p {
   margin-bottom: 16px;
 }
 
+.fade-in {
+  animation: fadein .5s;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;

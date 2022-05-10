@@ -1,13 +1,13 @@
 <template>
-  <div class="gallery__image-wrapper">
+  <div v-show="!loading" class="gallery__image-wrapper" :class="{'fade-in': !loading}">
     <el-image
       class="gallery-item"
       style="max-width: 536px"
       fit="scale"
-      lazy
       :src="srcListGallery[0]"
       :preview-src-list="srcListGallery"
       :alt="titleGallery"
+      @load="onLoadImage"
     />
     <div class="gallery__image-description">
       <span>{{ titleGallery }}</span>
@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, PropType, toRefs } from '@nuxtjs/composition-api';
+import { computed, defineComponent, PropType, ref, toRefs } from '@nuxtjs/composition-api';
 
 export enum Gallery {
   GOODS = 'goods',
@@ -77,29 +77,34 @@ export default defineComponent({
   },
   setup(props) {
     const { gallery } = toRefs(props);
+    const loading = ref(true);
 
     const titleList = new Map<string, string>([
-      [Gallery.GOODS, 'Наши изделия'],
-      [Gallery.COWORKING, 'Коворкинг'],
-      [Gallery.MANUFACTURE, 'Производство'],
-      [Gallery.TRAINING, 'Мастер классы и обучение'],
-      [Gallery.PLACE, 'Место расположения'],
+      [ Gallery.GOODS, 'Наши изделия' ],
+      [ Gallery.COWORKING, 'Коворкинг' ],
+      [ Gallery.MANUFACTURE, 'Производство' ],
+      [ Gallery.TRAINING, 'Мастер классы и обучение' ],
+      [ Gallery.PLACE, 'Место расположения' ],
     ]);
 
     const srcList = new Map<string, string[]>([
-      [Gallery.GOODS, goodsSrcList],
-      [Gallery.COWORKING, coworkingSrcList],
-      [Gallery.MANUFACTURE, manufactureSrcList],
-      [Gallery.TRAINING, trainingSrcList],
-      [Gallery.PLACE, placeSrcList],
+      [ Gallery.GOODS, goodsSrcList ],
+      [ Gallery.COWORKING, coworkingSrcList ],
+      [ Gallery.MANUFACTURE, manufactureSrcList ],
+      [ Gallery.TRAINING, trainingSrcList ],
+      [ Gallery.PLACE, placeSrcList ],
     ]);
 
     const titleGallery = computed(() => gallery?.value && titleList.get(gallery.value));
     const srcListGallery = computed(() => gallery?.value && srcList.get(gallery.value));
 
+    const onLoadImage = () => (loading.value = false);
+
     return {
       titleGallery,
       srcListGallery,
+      loading,
+      onLoadImage,
     };
   },
 });

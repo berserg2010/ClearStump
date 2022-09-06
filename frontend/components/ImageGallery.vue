@@ -34,6 +34,11 @@ const goodsSrcList = [
   require('~/assets/img/goods/05.jpg'),
   require('~/assets/img/goods/06.jpg'),
   require('~/assets/img/goods/07.jpg'),
+  require('~/assets/img/goods/08.jpg'),
+  require('~/assets/img/goods/09.jpg'),
+  require('~/assets/img/goods/10.jpg'),
+  require('~/assets/img/goods/11.jpg'),
+  require('~/assets/img/goods/12.jpg'),
 ];
 
 const coworkingSrcList = [

@@ -24,7 +24,7 @@ export default defineComponent({
   },
   head() {
     return {
-      title: `${this.title} - Ясен Пень`,
+      title: `${this.title} – Ясен Пень`,
     };
   },
 });

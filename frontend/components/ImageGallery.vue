@@ -34,6 +34,11 @@ const goodsSrcList = [
   require('~/assets/img/goods/05.jpg'),
   require('~/assets/img/goods/06.jpg'),
   require('~/assets/img/goods/07.jpg'),
+  require('~/assets/img/goods/08.jpg'),
+  require('~/assets/img/goods/09.jpg'),
+  require('~/assets/img/goods/10.jpg'),
+  require('~/assets/img/goods/11.jpg'),
+  require('~/assets/img/goods/12.jpg'),
 ];
 
 const coworkingSrcList = [
@@ -80,19 +85,19 @@ export default defineComponent({
     const loading = ref(true);
 
     const titleList = new Map<string, string>([
-      [Gallery.GOODS, 'Наши изделия'],
-      [Gallery.COWORKING, 'Коворкинг'],
-      [Gallery.MANUFACTURE, 'Производство'],
-      [Gallery.TRAINING, 'Мастер классы и обучение'],
-      [Gallery.PLACE, 'Место расположения'],
+      [ Gallery.GOODS, 'Наши изделия' ],
+      [ Gallery.COWORKING, 'Коворкинг' ],
+      [ Gallery.MANUFACTURE, 'Производство' ],
+      [ Gallery.TRAINING, 'Мастер классы и обучение' ],
+      [ Gallery.PLACE, 'Место расположения' ],
     ]);
 
     const srcList = new Map<string, string[]>([
-      [Gallery.GOODS, goodsSrcList],
-      [Gallery.COWORKING, coworkingSrcList],
-      [Gallery.MANUFACTURE, manufactureSrcList],
-      [Gallery.TRAINING, trainingSrcList],
-      [Gallery.PLACE, placeSrcList],
+      [ Gallery.GOODS, goodsSrcList ],
+      [ Gallery.COWORKING, coworkingSrcList ],
+      [ Gallery.MANUFACTURE, manufactureSrcList ],
+      [ Gallery.TRAINING, trainingSrcList ],
+      [ Gallery.PLACE, placeSrcList ],
     ]);
 
     const titleGallery = computed(() => gallery?.value && titleList.get(gallery.value));

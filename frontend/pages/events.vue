@@ -7,9 +7,19 @@
         <section>
           <h2 class="events__title">Творческая Коворкинг-мастерская</h2>
 
-          <p class="events__subtitle">– 17 – 18 декабря ЭКСПОФОРУМ.</p>
+          <p class="events__subtitle">– 17 и 18 декабря ЭКСПОФОРУМ.</p>
 
           <div class="events__content">
+            <div class="events__image-wrapper">
+              <el-image
+                class="gallery-item"
+                style="max-width: 536px"
+                fit="scale"
+                :src="require('~/assets/img/events/01.jpg')"
+                alt="Событие"
+              />
+            </div>
+
             <div>
               <p>
                 Уникальные мастер-классы:<br />

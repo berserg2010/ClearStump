@@ -31,7 +31,7 @@ export default defineComponent({
     const options = reactive({
       circular: true,
       align: 'center',
-      inputType: [ 'touch', 'mouse' ],
+      inputType: ['touch', 'mouse'],
     });
 
     const interval = ref<number | null>(null);

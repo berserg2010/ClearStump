@@ -2,7 +2,7 @@
   <header class="header">
     <div class="wrapper header__wrapper">
       <div class="logo">
-        <NuxtLink to="/" @click.native="menuButtonHandler(false)"> Ясен Пень </NuxtLink>
+        <NuxtLink to="/" @click.native="menuButtonHandler(false)">Ясен Пень</NuxtLink>
       </div>
 
       <Menu :menu-is-open="menuIsOpen" :menu-button-handler="menuButtonHandler" />

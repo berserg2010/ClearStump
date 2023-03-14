@@ -10,13 +10,13 @@
       <a class="services__list-item-link">Коворкинг</a>
     </div>
     <div class="services__list-item">
-      <a class="services__list-item-link">Юридический адрес и доступ в интернет</a>
+      <a class="services__list-item-link">Доступ в интернет</a>
     </div>
   </Flicking>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, reactive, onMounted, onBeforeUnmount } from '@vue/composition-api';
+import { defineComponent, onBeforeUnmount, onMounted, reactive, ref } from '@vue/composition-api';
 
 import { Flicking } from '@egjs/vue-flicking';
 

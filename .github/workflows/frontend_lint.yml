@@ -18,8 +18,8 @@ jobs:
         with:
           node-version: ${{ matrix.node_version }}
       - name: Install packages
-        run: npm ci
+        run: yarn install --inline-builds
       - name: Run linter
-        run: npm run lint
+        run: yarn lint
       - name: Run test
-        run: npm run test
+        run: yarn test

@@ -1,22 +1,15 @@
 <template>
   <Flicking ref="flickingEl" :options="options">
-    <div class="services__list-item">
-      <a class="services__list-item-link">Производство ‒ 3D и CNC</a>
-    </div>
-    <div class="services__list-item">
-      <a class="services__list-item-link">Мастер-классы и обучение</a>
-    </div>
-    <div class="services__list-item">
-      <a class="services__list-item-link">Коворкинг</a>
-    </div>
-    <div class="services__list-item">
-      <a class="services__list-item-link">Доступ в интернет</a>
+    <div v-for="item in menuItems" :key="item.name" class="services__list-item">
+      <NuxtLink :to="item.link" class="services__list-item-link">
+        {{ item.name }}
+      </NuxtLink>
     </div>
   </Flicking>
 </template>
 
 <script lang="ts">
-import { defineComponent, onBeforeUnmount, onMounted, reactive, ref } from '@vue/composition-api';
+import { defineComponent, onBeforeUnmount, onMounted, reactive, ref } from '@nuxtjs/composition-api';
 
 import { Flicking } from '@egjs/vue-flicking';
 
@@ -26,6 +19,13 @@ export default defineComponent({
     Flicking,
   },
   setup() {
+    const menuItems = [
+      { link: 'services', name: 'Производство ‒ 3D и CNC' },
+      { link: 'services', name: 'Мастер-классы и обучение' },
+      { link: 'services', name: 'Коворкинг' },
+      { link: 'services', name: 'Доступ в интернет' },
+    ];
+
     const flickingEl = ref<Flicking | undefined>();
 
     const options = reactive({
@@ -52,6 +52,7 @@ export default defineComponent({
     });
 
     return {
+      menuItems,
       flickingEl,
       options,
     };

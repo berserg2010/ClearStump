@@ -7,17 +7,8 @@
     }"
   >
     <ul>
-      <li class="menu_item">
-        <NuxtLink to="about" @click.native="menuButtonHandler(false)">О нас</NuxtLink>
-      </li>
-      <li class="menu_item">
-        <NuxtLink to="events" @click.native="menuButtonHandler(false)">События</NuxtLink>
-      </li>
-      <li class="menu_item">
-        <NuxtLink to="gallery" @click.native="menuButtonHandler(false)">Галерея</NuxtLink>
-      </li>
-      <li class="menu_item">
-        <NuxtLink to="contacts" @click.native="menuButtonHandler(false)">Контакты</NuxtLink>
+      <li v-for="item in menuItems" :key="item.link" class="menu_item">
+        <NuxtLink :to="item.link" @click.native="menuButtonHandler(false)">{{ item.name }}</NuxtLink>
       </li>
     </ul>
   </nav>
@@ -37,6 +28,19 @@ export default defineComponent({
       type: Function,
       required: true,
     },
+  },
+  setup() {
+    const menuItems = [
+      { link: 'about', name: 'О нас' },
+      { link: 'services', name: 'Услуги' },
+      { link: 'events', name: 'События' },
+      { link: 'gallery', name: 'Галерея' },
+      { link: 'contacts', name: 'Контакты' },
+    ];
+
+    return {
+      menuItems,
+    };
   },
 });
 </script>

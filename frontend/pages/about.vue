@@ -33,6 +33,7 @@ export default defineComponent({
   },
   head() {
     return {
+      // @ts-ignore
       title: `${this.title} – Ясен Пень`,
     };
   },

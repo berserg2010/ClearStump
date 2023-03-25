@@ -5,7 +5,7 @@
         <NuxtLink to="/" @click.native="menuButtonHandler(false)">Ясен Пень</NuxtLink>
       </div>
 
-      <Menu :menu-is-open="menuIsOpen" :menu-button-handler="menuButtonHandler" />
+      <MenuComponent :menu-is-open="menuIsOpen" :menu-button-handler="menuButtonHandler" />
 
       <button
         class="menu_button"
@@ -23,12 +23,12 @@
 <script lang="ts">
 import { defineComponent, ref } from '@nuxtjs/composition-api';
 
-import Menu from '@/components/Menu.vue';
+import MenuComponent from '@/components/Menu.vue';
 
 export default defineComponent({
   name: 'HeaderComponent',
   components: {
-    Menu,
+    MenuComponent,
   },
   setup() {
     const menuIsOpen = ref(false);

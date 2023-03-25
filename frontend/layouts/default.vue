@@ -1,6 +1,7 @@
 <template>
   <div>
     <Header />
+    
     <transition name="fade">
       <Nuxt />
     </transition>
@@ -8,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api';
+import { defineComponent } from '@nuxtjs/composition-api';
 
 import Header from '@/components/Header.vue';
 

@@ -48,7 +48,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from '@vue/composition-api';
+import { defineComponent, ref } from '@nuxtjs/composition-api';
 
 import SliderServices from '~/components/SliderServices.vue';
 
@@ -66,6 +66,7 @@ export default defineComponent({
   },
   head() {
     return {
+      // @ts-ignore
       title: `${this.title} – Ясен Пень`,
     };
   },

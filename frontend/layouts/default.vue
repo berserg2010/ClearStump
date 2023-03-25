@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    
+
     <transition name="fade">
       <Nuxt />
     </transition>

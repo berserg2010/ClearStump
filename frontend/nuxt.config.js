@@ -17,7 +17,7 @@ export default {
   // gh-pages
   target: 'static',
   router: {
-    base: '/',
+    base: '/ClearStump/',
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
